@@ -1,0 +1,34 @@
+:root{--bg:#eef1f4;--ink:#16212b;--mute:#566470;--line:#c9d2da;--accent:#1f5f8b;--card:#f8fafb;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10171d;--ink:#e6ecf1;--mute:#97a4af;--line:#2a3640;--accent:#6fb1dd;--card:#162029}}
+:root[data-theme="dark"]{--bg:#10171d;--ink:#e6ecf1;--mute:#97a4af;--line:#2a3640;--accent:#6fb1dd;--card:#162029}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 "Instrument Sans",system-ui,sans-serif}
+main{max-width:46rem;margin:0 auto;padding:4rem 1.5rem 3rem}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:600;margin:0;line-height:1.15}
+h1{font-size:clamp(2.6rem,9vw,4.5rem);letter-spacing:-.02em}
+.role{font-size:1.25rem;color:var(--mute);margin:.75rem 0 1.5rem}
+.intro{max-width:36rem;margin:0 0 1.5rem}
+a{color:var(--accent);text-underline-offset:.2em}
+a:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:2px}
+section{margin-top:3.5rem;padding-top:1.75rem;border-top:1px solid var(--line)}
+h2{font-size:1.5rem;margin-bottom:1.5rem}
+.work{display:grid;gap:1.25rem}
+.proj{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:6px;padding:1.25rem 1.5rem}
+.proj h3{font-size:1.2rem;margin-bottom:.35rem}
+.proj p{margin:0;color:var(--mute)}
+.proj .tags{margin-top:.6rem;font-size:.9rem;color:var(--accent)}
+.job{display:grid;grid-template-columns:9rem 1fr;gap:.25rem 1.5rem;margin-bottom:2rem}
+.when{color:var(--mute);font-size:.95rem}
+.job h3{font-size:1.15rem}
+.job .co{color:var(--mute);margin:.1rem 0 .5rem}
+.job ul{margin:0;padding-left:1.1rem}
+.job li{margin-bottom:.35rem}
+.skills{display:flex;flex-wrap:wrap;gap:.5rem}
+.skills span{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:.25rem .85rem;font-size:.95rem}
+footer{margin-top:4rem;color:var(--mute);font-size:.9rem}
+@media (max-width:560px){.job{grid-template-columns:1fr}}
+
+.theme-toggle{position:fixed;top:calc(env(safe-area-inset-top,0px) + .75rem);right:1rem;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:.35rem .9rem;font:inherit;font-size:.9rem;cursor:pointer}
+.theme-toggle:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
